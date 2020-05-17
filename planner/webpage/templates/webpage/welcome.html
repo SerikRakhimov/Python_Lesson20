@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello</h1>
+Number of rooms: {{num_of_rooms}}
+<ul>
+{% for m in rooms %}
+    <li>
+        <a href="{% url 'detail_room' m.id %}">{{m}}</a>
+    </li>
+{% endfor %}
+</ul>
+Number of meetings: {{num_of_meetings}}
+<ul>
+{% for m in meetings %}
+    <li>
+        <a href="{% url 'detail_meeting' m.id %}">{{m}}</a>
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
